@@ -55,7 +55,9 @@ MySQL 启动方式和普通的 windows 程序双击启动方式不同，分为�
    ![start-mysql-services-01](https://img.zxj.guru/mysql/img/start-mysql-services-01.png)
    ![start-mysql-services-02](https://img.zxj.guru/mysql/img/start-mysql-services-02.png)
 
-2. 命令方式启动：`windows`+`r` 键调出运行窗口，输入 `services.msc` 命令。随后在服务中找到 `MySQL80` 服务启动即可![start-mysql-services-03](https://img.zxj.guru/mysql/img/start-mysql-services-03.png)
+2. 命令方式启动：`windows`+`r` 键调出运行窗口，输入 `services.msc` 命令。随后在服务中找到 `MySQL80` 服务启动即可。
+
+   ![start-mysql-services-03](https://img.zxj.guru/mysql/img/start-mysql-services-03.png)
    ![start-mysql-services-04](https://img.zxj.guru/mysql/img/start-mysql-services-04.png)
 
 3. 以 **管理员身份** 运行 `cmd` 打开 dos 窗口，输出 `net start mysql80`。

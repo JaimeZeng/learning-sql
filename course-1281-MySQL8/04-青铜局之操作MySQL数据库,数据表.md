@@ -4,13 +4,13 @@
 
 ### 创建数据库
 
-**语法：**
+#### 语法
 
 - 直接创建数据库：`CREATE DATABASE 数据库名;`
 - 判断是否存在并创建数据库：`CREATE DATABASE IF NOT EXISTS 数据库名;`
 - 创建数据库并指定字符集(编码表)：`CREATE DATABASE 数据库名 CHARACTER SET 字符集;`
 
-**具体操作：**
+#### 具体操作
 
 - 直接创建数据库 db1；
 - 创建数据库 db2，在创建之前先确认是否存在。若不存在就创建；
@@ -76,12 +76,14 @@ mysql> SHOW CREATE DATABASE db3;
 
 ### 查看数据库
 
-**语法：**
+#### 语法
 
 - 查看所有的数据库：`SHOW DATABASES;`
 - 查看某个数据库的定义信息：`SHOW CREATE DATABASE 数据库名;`
 
-**具体操作：** 查看所有的数据库以及 db3 数据库的定义信息。
+#### 具体操作
+
+- 查看所有的数据库以及 db3 数据库的定义信息。
 
 ```mysql
 mysql> SHOW DATABASES;
@@ -111,11 +113,13 @@ mysql> SHOW CREATE DATABASE db3;
 
 ### 修改数据库
 
-**语法：**
+#### 语法
 
 - 修改数据库字符集格式：`ALTER DATABASE 数据库名 DEFAULT CHARACTER SET 字符集;`
 
-**具体操作：** 将 db3 数据库的字符集改成 utf8。`ALTER DATABASE db3 DEFAULT CHARACTER SET utf8;`
+#### 具体操作
+
+- 将 db3 数据库的字符集改成 utf8。`ALTER DATABASE db3 DEFAULT CHARACTER SET utf8;`
 
 ```mysql
 mysql> ALTER DATABASE db3 DEFAULT CHARACTER SET utf8;
@@ -131,11 +135,13 @@ mysql> SHOW CREATE DATABASE db3;
 
 ### 删除数据库
 
-**语法：**
+#### 语法
 
 - 删除数据库：`DROP DATABASE 数据库名;`
 
-**具体操作：** 删除 db2 数据库。`DROP DATABASE db2;`
+#### 具体操作
+
+- 删除 db2 数据库。`DROP DATABASE db2;`
 
 ```mysql
 mysql> DROP DATABASE DB2;
@@ -158,12 +164,12 @@ mysql> SHOW DATABASES;
 
 ### 使用数据库
 
-**语法：**
+#### 语法
 
 - 查看正在使用的数据库：`SELECT DATABASE();`
 - 使用/切换数据库：`USE 数据库名;`
 
-**具体操作：**
+#### 具体操作
 
 - 查看正在使用的数据库：`SELECT DATABASE();`
 - 使用 db1 数据库：`USE db1;`
@@ -242,9 +248,11 @@ mysql> SELECT DATABASE();
 | 4   | 刘备 | 45  | 杭州市  |
 | 5   | 张飞 | 31  | 沈阳市  |
 
-**语法：** `CREATE TABLE 表名 (字段名1 字段类型1, 字段名2 字段类型2…);`
+#### 语法
 
-**关键字说明：**
+- `CREATE TABLE 表名 (字段名1 字段类型1, 字段名2 字段类型2…);`
+
+#### 关键字说明
 
 - CREATE -- 表示创建
 - TABLE -- 表示创建一张表
@@ -258,9 +266,9 @@ CREATE TABLE 表名 (
 );
 ```
 
-**具体操作：**
+#### 具体操作
 
-创建 student 表包含 id,name,birthday 字段。
+- 创建 student 表包含 id,name,birthday 字段。
 
 ```sql
 mysql> CREATE TABLE student (
@@ -273,14 +281,13 @@ Query OK, 0 rows affected (0.04 sec)
 
 ### 查看表
 
-**语法：**
+#### 语法
 
 1. 查看某个数据库中的所有表：`SHOW TABLES;`
-
 2. 查看表结构：`DESC 表名;`
 3. 查看创建表的 SQL 语句：`SHOW CREATE TABLE 表名;`
 
-**具体操作：**
+#### 具体操作
 
 查看前面创建的 student 表， student 表结构，以及 student 表的创建语句。
 
@@ -319,9 +326,11 @@ mysql> SHOW CREATE TABLE student;
 
 ### 快速创建一个表结构相同的表
 
-**语法：** `CREATE TABLE 新表名 LIKE 旧表名;`
+#### 语法
 
-**具体操作：**
+- `CREATE TABLE 新表名 LIKE 旧表名;`
+
+#### 具体操作
 
 1. 创建 s1 表，s1 表结构和 student 表结构相同。
 2. 查看 s1 表结构。
@@ -359,9 +368,13 @@ mysql> SHOW CREATE TABLE s1;
 
 #### 添加表列
 
-**语法：** `ALTER TABLE 表名 ADD 列名 类型;`
+**语法：**
 
-**具体操作：**为学生表 student 添加一个新的字段 remark,类型为 varchar(20)。
+- `ALTER TABLE 表名 ADD 列名 类型;`
+
+**具体操作：**
+
+- 为学生表 student 添加一个新的字段 remark,类型为 varchar(20)。
 
 ```mysql
 mysql> DESC student;
@@ -392,9 +405,13 @@ mysql> DESC student;
 
 #### 修改表列类型
 
-**语法：** `ALTER TABLE 表名 MODIFY列名 新的类型;`
+**语法：**
 
-**具体操作：** 将 student 表中的 remark 字段类型的改成 int。
+- `ALTER TABLE 表名 MODIFY列名 新的类型;`
+
+**具体操作：**
+
+- 将 student 表中的 remark 字段类型的改成 int。
 
 ```mysql
 mysql> ALTER TABLE student MODIFY remark INT;
@@ -415,9 +432,13 @@ mysql> DESC student;
 
 #### 修改表列名
 
-**语法：** `ALTER TABLE 表名 CHANGE 旧列名 新列名 类型;`
+**语法：**
 
-**具体操作：** 将 student 表中的 remark 字段名改成 intro，类型改为 VACHAR(30)。
+- `ALTER TABLE 表名 CHANGE 旧列名 新列名 类型;`
+
+**具体操作：**
+
+- 将 student 表中的 remark 字段名改成 intro，类型改为 VACHAR(30)。
 
 ```mysql
 mysql> ALTER TABLE student CHANGE remark intro VARCHAR(30);
@@ -438,9 +459,13 @@ mysql> DESC student;
 
 #### 删除表列
 
-**语法：** `ALTER TABLE 表名 DROP 列名;`
+**语法：**
 
-**具体操作：** 删除 student 表中的字段 intro。
+- `ALTER TABLE 表名 DROP 列名;`
+
+**具体操作：**
+
+- 删除 student 表中的字段 intro。
 
 ```mysql
 mysql> ALTER TABLE student DROP intro;
@@ -461,9 +486,13 @@ mysql> DESC student;
 
 #### 修改表名
 
-**语法：** `RENAME TABLE 表名 TO 新表名;`
+**语法：**
 
-**具体操作：** 将学生表 student 改名成 student2。
+- `RENAME TABLE 表名 TO 新表名;`
+
+**具体操作：**
+
+- 将学生表 student 改名成 student2。
 
 ```mysql
 mysql> RENAME TABLE student TO student2;
@@ -482,9 +511,13 @@ mysql> DESC student2;
 
 #### 修改表字符集
 
-**语法：** `ALTER TABLE 表名 character set 字符集;`
+**语法：**
 
-**具体操作：** 将 sutden2 表的编码修改成 gbk。
+- `ALTER TABLE 表名 character set 字符集;`
+
+**具体操作：**
+
+- 将 sutden2 表的编码修改成 gbk。
 
 ```mysql
 mysql> ALTER TABLE student2 CHARACTER SET gbk;
@@ -507,13 +540,13 @@ mysql> SHOW CREATE TABLE student2;
 
 ### 删除表
 
-**语法：**
+#### 语法
 
 1. 直接删除表：`DROP TABLE 表名;`
 
 2. 判断表是否存在并删除表：`DROP TABLE IF EXISTS 表名;`
 
-**具体操作：**
+#### 具体操作
 
 1. 删除 s1 表。
 

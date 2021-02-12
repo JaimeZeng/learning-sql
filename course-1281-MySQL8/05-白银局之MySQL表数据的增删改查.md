@@ -658,7 +658,7 @@ mysql> SELECT * FROM student2;
 
 #### 具体操作
 
-查询 student2 表中所有数据。
+- 查询 student2 表中所有数据。
 
 ```sql
 SELECT * FROM student2;
@@ -705,7 +705,7 @@ mysql> SELECT id, name, age, sex, address, phone, birthday, math, english FROM s
 
 #### 具体操作
 
-查询 student2 表中 name, age 字段所有数据。
+- 查询 student2 表中 name, age 字段所有数据。
 
 ```mysql
 mysql> SELECT name, age FROM student2;
@@ -735,7 +735,7 @@ mysql> SELECT name, age FROM student2;
 
 #### 具体操作
 
-查询 sudent2 表中 name, age 字段数据，查询结果中将 name 列的别名设为姓名，age 列的别名设为年龄。
+- 查询 sudent2 表中 name, age 字段数据，查询结果中将 name 列的别名设为姓名，age 列的别名设为年龄。
 
 ```mysql
 mysql> SELECT name AS 姓名, age AS 年龄 FROM student2;
