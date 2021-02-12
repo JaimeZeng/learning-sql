@@ -101,4 +101,6 @@
   MD5: 8de85ced955631901829a1a363cdbf50
   ```
 
-- 官方安装说明：[MySQL :: MySQL 8.0 Reference Manual ::
+- 官方安装说明：[MySQL :: MySQL 8.0 Reference Manual :: 2.3 Installing MySQL on Microsoft Windows](https://dev.mysql.com/doc/refman/8.0/en/windows-installation.html)
+
+- 视频教程：[数据库的安装，MySQL8.0 零基础入门之从青铜到钻石教程-慕课网 (imooc.com)](https://www.imooc.com/video/22547)
